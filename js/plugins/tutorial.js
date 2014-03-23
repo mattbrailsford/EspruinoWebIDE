@@ -90,7 +90,7 @@
    }
   
   function displayTutorialStep() {
-    var inputLine = Espruino.Core.Terminal.getInputLine(0);
+    var inputLine = undefined; //Espruino.Core.Terminal.getInputLine(0);
     var text = '<div class="tutorial_text">'+Espruino.Core.Utils.markdownToHTML(tutorialData[tutorialStep].text)+'<br/>';
     if (tutorialData[tutorialStep].code != "")
       text += '<div class="tutorial_code">'+Espruino.Core.Utils.escapeHTML(tutorialData[tutorialStep].code).replace(/\n/g,"<br/>")+'</div>';
